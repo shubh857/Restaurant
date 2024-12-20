@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food & Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Food & Restaurant</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Food & Restaurant</h2>
+            <p>Your favorite place for delicious meals and great ambiance.</p>
+            <button onclick="showMenu()">View Our Menu</button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2>Our Delicious Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Pizza</h3>
+                <p>Cheesy, hot, and fresh pizza with your favorite toppings.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Burger</h3>
+                <p>Juicy, grilled burger with crispy fries.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Pasta</h3>
+                <p>Delicious pasta with creamy sauce and fresh vegetables.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Sushi</h3>
+                <p>Fresh and tasty sushi rolls with authentic ingredients.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Food & Restaurant | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Section */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav .logo h1 {
+  font-size: 24px;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+nav .nav-links li {
+  margin-left: 20px;
+}
+
+nav .nav-links a {
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+}
+
+nav .menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-content {
+  color: white;
+}
+
+.hero h2 {
+  font-size: 40px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.hero .btn {
+  background-color: #f7c04c;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Menu Section */
+.menu {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.menu-item h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.menu-item p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background-color: #f7c04c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: none;
+  }
+  
+  nav .menu-toggle {
+    display: block;
+  }
+
+  .menu-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-item {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+// Mobile Menu Toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Add some CSS for the mobile menu toggle effect
+document.styleSheets[0].insertRule(`
+  .nav-links.active {
+    display: block;
+  }
+`, 0);
